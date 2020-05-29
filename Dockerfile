@@ -1,10 +1,16 @@
-FROM node:latest
+FROM node:10
 
-WORKDIR /SRC
+WORKDIR /
 
 ENV PORT 4567
 
-COPY . /src
+COPY package*.json ./
 
-CMD [ 'node", "src/server.js" ]
+RUN npm install
+
+COPY . .
+
+EXPOSE 4567
+
+CMD [ 'node", "server.js" ]
 
