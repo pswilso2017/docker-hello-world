@@ -1,6 +1,7 @@
 FROM node:10
 
 # Create app directory
+
 WORKDIR /src
 
 COPY package*.json ./
