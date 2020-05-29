@@ -1,12 +1,12 @@
 FROM node:10
 
-WORKDIR /
+WORKDIR /src
 
-ENV PORT 4567
-
-COPY . .
+COPY package*.json ./
 
 RUN npm install
+
+COPY . .
 
 EXPOSE 4567
 
