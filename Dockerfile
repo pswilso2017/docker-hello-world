@@ -13,3 +13,5 @@ COPY . .
 EXPOSE 4567
 
 CMD [ "node", "server.js" ]
+
+# End of file
